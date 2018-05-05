@@ -1,0 +1,50 @@
+{% if page.categories %}
+  {% capture categories %}
+    {% for category in page.categories %}
+      <span class="label  label--category"><a href="{{ site.baseurl }}/categories/#{{ category | downcase }}">{{ category }}</a></span>{% if forloop.last == false %},{% endif %}
+    {% endfor %}
+  {% endcapture %}
+{% elsif page.category %}
+  {% capture categories %}
+    <span class="label  label--category"><a href="{{ site.baseurl }}/categories/#{{ page.category | downcase }}">{{ page.category }}</a></span>
+  {% endcapture %}
+{% endif %}
+
+<small class="small  post-meta">
+    {% assign mwidth =  {{include.min-width | default: 10rem }}%}
+    {% assign maxwidth =  {{include.max-width | default: 10rem }}%}
+    {% if mwidth > maxwidth%}{% assign maxwidth = mwidth%}{% endif %}
+   <img {%if page.image%} src="{{page.image  | prepend: site.baseurl  }}" alt="{{page.title}}" style="max-width:{{maxwidth}}; max-height:30rem; min-width:{{mwidth}};" {%endif%}>
+   <br>
+  {{ categories | append: "&nbsp;&middot;&nbsp;" }}<time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date_to_string }}</time> 
+  
+   <!-- Show official site, trailer, etc.-->
+  {% assign show = include.show | default: false %}
+
+  {% if show %}
+    <div class="aside" style="float: right">
+      {% if page.website %}
+        <a href="{{page.website}}">
+            <ins style="float: right">Official website {% include icon.html id=link title=website %} </ins>
+        </a>
+      {% endif %}
+      
+      {% if page.trailer %}
+        <a href="{{page.trailer}}">
+            <ins style="float: right"> Watch Trailer {% include icon.html id="youtube" title=Trailer %}</ins>
+        </a>
+      {% endif %}
+      
+      {% if page.presskit %}
+        {% if page.presskit contains '://' %}
+          {% assign url = page.presskit %}
+        {% else %}
+          {% assign url = page.presskit | relative_url %}
+        {% endif %}
+        <a href="{{ url  | prepend: site.baseurl   }}">
+            <ins style="float: right"> Press Page {% include icon.html id="presskit" title=Presskit %} </ins>
+        </a>
+      {% endif %}
+    </div>
+  {% endif %}
+</small>

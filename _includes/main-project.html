@@ -1,0 +1,18 @@
+<section class="section  typeset">
+    <ul class="list  list--posts">
+        {% for page in site.works %}
+            {% if page.url == site.main-project%}
+                <li class="item  item--post">
+                    <article class="article  article--post">
+
+                    {% include post-meta.html min-width="25rem" %}
+                    {% include button.html link=site.main-project left="20%" color="grey" text=page.title text-color="#000000"%}
+                    {{ page.excerpt | markdownify | truncatewords: 30 }}
+                    </article>
+                </li>
+                {%break%}
+            {%endif%}
+            {%continue%}
+        {% endfor %}
+    </ul>
+</section>

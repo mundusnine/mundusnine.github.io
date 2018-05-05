@@ -1,0 +1,4 @@
+<a class="logo" href="{{ site.baseurl }}/" {% if include.max-width %} style=" max-width: {{include.max-width}}; width:{{include.max-width}}; height:{{include.max-width}}; max-height: {{include.max-width}};" {% endif %}>
+  <img {% if include.max-width %} style="max-width: {{include.max-width}}; width:{{include.max-width}}; height:{{include.max-width}};  max-height: {{include.max-width}};" {% endif %} src="{{ site.logo  | prepend: site.baseurl  }}" alt="{{ site.title | append: ' logo' }}"/>
+</a>
+

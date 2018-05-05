@@ -1,0 +1,135 @@
+# Site configuration
+# 1. Files excluded from Jekyll builds
+# 2. Installed Gems
+# 3. Gem settings
+# 4. Jekyll settings
+# 5. Collections
+# 6. Jekyll collections settings
+# 7. Site settings
+# 8. Site navigation
+
+# 1. Files excluded from Jekyll builds
+exclude:
+- README.md
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- screenshot.png
+- LICENSE
+- CNAME
+- Gemfile
+- Gemfile.lock
+- alembic-jekyll-theme.gemspec
+
+# 2. Installed Gems
+plugins:
+- jekyll-sitemap
+- jekyll-mentions
+- jekyll-paginate
+- jekyll-seo-tag
+- jekyll-redirect-from
+- jekyll-default-layout
+- jekyll-feed
+- jemoji
+
+# 3. Gem settings
+paginate: 1000  # jekyll-paginate > items per page
+paginate_path: blog/page:num # jekyll-paginate > blog page
+feature_image: "/assets/website_homepage.png" # default feature header image is overridable in the md files
+jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
+twitter:
+  username: mundusnine # jekyll-seo-tag > Owners twitter username
+author: mundusnine # jekyll-seo-tag > default author
+social: # jekyll-seo-tag > social overrides
+  name: Jean-Sébastien Nadeau # jekyll-seo-tag > real name
+  links:  # jekyll-seo-tag > social aliases (sameAs)
+    - https://twitter.com/DavidDarnes
+    - https://www.facebook.com/daviddarnes
+    - https://www.linkedin.com/in/daviddarnes
+    - https://plus.google.com/+DavidDarnes
+    - https://github.com/mundusnine
+
+# 4. Jekyll settings
+sass:
+  style: compressed # Style compression
+permalink: pretty  # Permalink style (/YYYY/MM/DD/page-name/)
+excerpt_separator: <!-- more --> # Marks end of excerpt in posts
+# timezone: America/New York # Timezone for blog posts and alike
+
+# 5. Collections
+main-project: /works/daemonvsdemon #<!-- write the position in the _site path no extensions -->
+collections:
+  works:
+    title: Portfolio # Needed for Siteleaf
+    output: true
+    description: "Our works" # The post list page content
+    feature_text: |
+      Welcome to our portfolio
+    path: "/_works/"
+    permalink: /:collection/:name
+
+  posts:
+    title: Posts # Needed for Siteleaf
+    output: true
+    description: "Idea's and musings" # The post list page content
+    feature_text: |
+      Welcome to our blog
+
+# 6. Jekyll collections settings
+defaults:
+  -
+    values:
+      image: "/assets/logo.svg" # Default image for sharing
+      color: "#0d94e7"
+
+# 7. Site settings
+encoding: utf-8 # Make sure the encoding is right
+lang: en-US # Set the site language
+title: "Rainbow Puke Games" # Site name or title, also used in jekyll-seo-tag
+logo: "/assets/logo.svg" # Site logo, also used in jekyll-seo-tag
+description: "Indie dev studio based in Canada" # Site description and default description, also used in jekyll-seo-tag
+url: "https://mundusnine.gitlab.io" # Site url, also used in jekyll-seo-tag
+baseurl: "/rpg-website"
+repo: "https://github.com/daviddarnes/alembic"
+email: "me@daviddarnes.com"
+# disqus: "alembic-1" # Blog post comments, uncomment the option and set the site ID from your Disqus account
+avatarurl: "/assets/logo_rpgs.ico" # Uses avatars for favicons to get multple sites, eg Gravatar, Twitter, GitHub
+# google_analytics: ''
+# service_worker: false # Will turn off the service worker if set to false
+css_inline: true # Will insert all styles into a single <style> block in the <head> element and remove the style <link> reference
+
+# 8. Site navigation
+navigation_header:
+  Home: /
+  Portfolio: /portfolio/
+  Services: /services/
+  Elements: /elements/
+  Contact: /contact/
+  About Us: /about-us/
+  # Search: /search/
+
+navigation_footer:
+  Created by Mundusnine: https://github.com/mundusnine
+  Home: /
+
+social_links_securas: # Appears in sidebar. Set the urls then uncomment and comment out as desired
+  Twitter: https://twitter.com/Securas2010
+  GitHub: https://github.com/securas
+  Itchio: https://securas.itch.io/
+
+social_links_mundus:
+  Twitter: https://twitter.com/mundusnine
+  GitHub: https://github.com/mundusnine
+  Soundcloud: https://soundcloud.com/mundusnine
+  Itchio: https://thedarknessinside19.itch.io/
+
+sharing_links: # Appear at the bottom of single blog posts, uncomment and comment out as desired. Colours set the button colour
+  Twitter: "#0d94e7"
+  facebook: "#3B5998"
+  Google+: "#DC4E41"
+  # Pinterest: "#BD081C"
+  # LinkedIn: "#0077B5"
+  # tumblr: "#36465D"
+  # Reddit: "#FF4500"
+  # Hacker News: "#ff6600"
+  # Designer News: "#2D72D9"
+  # Email: ""

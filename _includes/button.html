@@ -1,0 +1,7 @@
+{% if include.left %}<div style="text-align: left-center; position: relative; left: {{include.left}};">{% endif %}
+    <a class="button" {% if include.social %} href="{{ include.link  |default: '#' }}"  {% else %} href="{{ include.link  | prepend: site.baseurl | default: '#' }}" {% endif %}
+        {% if include.color %} style="background: {{ include.color }}; color: {{include.text-color}};"{% endif %}
+        {% if include.image %} style="background-image: {{ include.image  | prepend: site.baseurl }};"{% endif %}  >
+        {{ include.text | default: "Button" }}{% if include.icon %}&nbsp; {% include icon.html id=include.icon title=include.icon %}{% endif %}
+    </a>
+{% if include.left %}</div>{% endif %}

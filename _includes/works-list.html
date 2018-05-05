@@ -1,0 +1,36 @@
+{% if paginator.works %}
+<section class="section  typeset">
+  <ul class="list  list--posts">
+    {% for page in paginator.works %}
+      <li class="item  item--post">
+        <article class="article  article--post">
+
+          {% include post-meta.html %}
+          <h2><a href="{{ site.baseurl }}{{ page.url }}">{{ page.title }}</a></h2>
+          {{ page.excerpt | markdownify | truncatewords: 60 }}
+
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+  {% include post-pagination.html %}
+</section>
+{% else %}
+<section class="section  typeset">
+  <ul class="list  list--posts">
+    {% for page in site.works %}
+        {% if page.url == site.main-project%}
+            {%continue%}
+        {%endif%}
+      <li class="item  item--post">
+        <article class="article  article--post">
+            {% include post-meta.html max-width="8rem" %}
+            <h4>{{ page.title }}</h4>
+            {{ page.excerpt | markdownify | truncatewords: 10 }}
+            <a href="{{ site.baseurl }}{{ page.url }}"> *** Read more</a>
+        </article>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}

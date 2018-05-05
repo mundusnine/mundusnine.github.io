@@ -1,0 +1,10 @@
+<!-- Underlined supported platforms -->
+{% if page.platforms%}
+    <h6><ins> Supported platforms :</ins>
+      &nbsp;
+      {% for platform in page.platforms %}
+        {% include icon.html id=platform title=platform %}
+      {%endfor%}
+    </h6>
+    <br>
+  {% endif %}
