@@ -32,7 +32,7 @@ plugins:
 - jemoji
 
 # 3. Gem settings
-paginate: 1000  # jekyll-paginate > items per page
+paginate: 1000 # jekyll-paginate > items per page
 paginate_path: blog/page:num # jekyll-paginate > blog page
 feature_image: "/assets/website_homepage.png" # default feature header image is overridable in the md files
 jekyll-mentions: https://twitter.com # jekyll-mentions > service used when @replying
