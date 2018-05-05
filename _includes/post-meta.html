@@ -16,7 +16,7 @@
     {% if mwidth > maxwidth%}{% assign maxwidth = mwidth%}{% endif %}
    <img {%if page.image%} src="{{page.image  | prepend: site.baseurl  }}" alt="{{page.title}}" style="max-width:{{maxwidth}}; max-height:30rem; min-width:{{mwidth}};" {%endif%}>
    <br>
-  {{ categories | append: "&nbsp;&middot;&nbsp;" }}<time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date_to_string }}</time> 
+  {{ categories | append: "&nbsp;&middot;&nbsp;" }} {% if page.date %}<time datetime="{{ page.date | date_to_xmlschema }}" class="time">{{ page.date | date_to_string }}</time> {% endif %} 
   
    <!-- Show official site, trailer, etc.-->
   {% assign show = include.show | default: false %}
