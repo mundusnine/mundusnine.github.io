@@ -1,3 +1,6 @@
 [submodule "themes/ataraxia-zola"]
 	path = themes/ataraxia-zola
 	url = git@github.com:mundusnine/ataraxia-zola.git
+[submodule "blog"]
+	path = blog
+	url = git@github.com:mundusnine/byoge-blog.git
