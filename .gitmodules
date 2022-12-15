@@ -1,0 +1,3 @@
+[submodule "themes/ataraxia-zola"]
+	path = themes/ataraxia-zola
+	url = git@github.com:mundusnine/ataraxia-zola.git
