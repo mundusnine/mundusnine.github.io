@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+	<title>Foundry Tools - website</title>
+	<subtitle>Gamedev tools by Foundry</subtitle>
+	<link href="https://website-url.com/tags/website/atom.xml" rel="self" type="application/atom+xml"/>
+  <link href="https://website-url.com/"/>
+	<generator uri="https://www.getzola.org/">Zola</generator>
+	<updated>2022-12-15T15:42:07+00:00</updated>
+	<id>https://website-url.com/tags/website/atom.xml</id>
+	<entry xml:lang="en">
+		<title>Why Bring your own Game Engine ?</title>
+		<published>2022-12-15T15:42:07+00:00</published>
+		<updated>2022-12-15T15:42:07+00:00</updated>
+		<link rel="alternate" href="https://website-url.com/blog/game-making-analysis/" type="text/html"/>
+		<id>https://website-url.com/blog/game-making-analysis/</id>
+		<content type="html">&lt;h3 id=&quot;tldr&quot;&gt;TLDR:&lt;&#x2F;h3&gt;
+&lt;p&gt;I searched for the best game engine, I almost found it, but instead found out that I need to build BYOGE, which isn&#x27;t a game engine. What will be needed &lt;a href=&quot;https:&#x2F;&#x2F;website-url.com&#x2F;blog&#x2F;game-making-analysis&#x2F;#conclusion&quot;&gt;is&lt;&#x2F;a&gt;&lt;&#x2F;p&gt;
+&lt;span id=&quot;continue-reading&quot;&gt;&lt;&#x2F;span&gt;&lt;h2 id=&quot;the-big-search&quot;&gt;The big search&lt;&#x2F;h2&gt;
+&lt;p&gt;In my search for the best game engine, I have come to the conclusion that their is no such thing. Why ? Well it&#x27;s quite simple, trying to use a swiss knife as your only tool to accomplish your basic surviving will work fine in most case&#x27;s, but if your in antartica, the cold might hinder what your doing and a wooden tool would suffice.&lt;&#x2F;p&gt;
+&lt;p&gt;Even though you probably don&#x27;t know it, your probably using a game engine thats actually hindering your workflow, not simplifing it. Another way of saying it is, your not learning the actual concepts to make games with Unity&#x2F;Unreal&#x2F;Godot but actually the minutia of how someone thought it would be good to generalize the way of making games. Do you see the difference ? &lt;&#x2F;p&gt;
+&lt;p&gt;In my research though, I did come into contact with some great contenders. There&#x27;s this little engine called Source engine and another was the Doom&#x2F;Quake engines. Why those ? Well in both those case&#x27;s, there was a great separtion of labor. There was the actual game runtime and the game editor. They only talked to each other with this little concept invented by the Unix OS devs called text files. &lt;code&gt;&amp;quot;Then why are you whinning on the interweebs ?&amp;quot; &lt;&#x2F;code&gt; Because reasons...&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;why-not-source-2&quot;&gt;Why not Source 2 ?&lt;&#x2F;h2&gt;
+&lt;p&gt;Here be reasons, they are my own, do what you will with them. But in short, Source2 as been announced as a futur open source engine... back in 2016. Thanks Gaben for being an engine tease. At this point, and considering how well Source 1 as been maintained by Valve when it was open sourced, I wouldn&#x27;t hold my breath. You could have access to the engine now, through Chaos Interactive&#x27;s deal with Valve. But, the issue there is that you have to sign a contract with Valve and that would be fine but it&#x27;s not futur proof.&lt;&#x2F;p&gt;
+&lt;p&gt;So no Source2 source code, can we just use their editor and use their text files in our own engines ? We could, but the file format is closed source and &amp;quot;compiled&amp;quot; by the Editor. Shout out to Source2-viewer, he pretty much implemented a way to do it and showed me that, while doable, it&#x27;s convoluted in itself. In the end, the editor scene compiler is closed source and will produce files specific to Source2 which is fine but couldn&#x27;t be used to support a variety of engine&#x27;s. &lt;code&gt;&amp;quot;Woooh, we want to support multiple engines now ?&amp;quot;&lt;&#x2F;code&gt; Apparently.&lt;&#x2F;p&gt;
+&lt;p&gt;These facts outlined, I would prefer doing something thats open from the start. That way, it&#x27;s futur proof, it will be accessible to all and easily integrable for engine makers. By the way, nothing against Valve, they have been really great with their mod support of their games and their work to support FOSS OS&#x27;s. They are actually one of the game company&#x2F;store front that I respect the most.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;no-source-what-next-quake-of-doom-maybe&quot;&gt;No Source ? What next ? Quake of Doom maybe ?&lt;&#x2F;h2&gt;
+&lt;p&gt;In my searches, I stumbled upon other engine&#x27;s that were greatly moddable. One of those was the early games from Id Tech. Those initial engine&#x27;s source are available, modders are still making maps and creating new content for these engines. New engines are being built to support the data formats of those games and make raytraced Doom&#x27;s or Quake&#x27;s. Why ? Well some fully featured open source level editors and tooling have been developped for these games, which is really interesting in itself. The best tools developped that I had a look at was Trenchbroom. The format of the Quake and Doom game files are well documented and some FOSS libraries are available to parse&#x2F;load these files. &lt;code&gt;&amp;quot;We found it, the holy grail !&amp;quot;&lt;&#x2F;code&gt; Sadly, no.&lt;&#x2F;p&gt;
+&lt;p&gt;Those tools are really great. The file formats are good but they don&#x27;t reflect the needs of the games of today and tommorrow. They are a true testament though that if you design the format well, have good stable tooling and give creators good level design tools, they&#x27;ll create until there&#x27;s no tommorrow.&lt;&#x2F;p&gt;
+&lt;h2 id=&quot;conclusion&quot;&gt;Conclusion&lt;&#x2F;h2&gt;
+&lt;p&gt;What are we left with ? Ourselves, and one of use needs to make that thing that seems so perfect we can&#x27;t touch. By the way, it will be a mess.&lt;&#x2F;p&gt;
+&lt;p&gt;In short, here&#x27;s what I found out in my search for the best game engine:&lt;&#x2F;p&gt;
+&lt;ul&gt;
+&lt;li&gt;We need to have a visual tool that enables game designers and visual artists to create worlds easily&lt;&#x2F;li&gt;
+&lt;li&gt;We need an easy file format for programmers to use, or even sidestep easily to make a specified format&lt;&#x2F;li&gt;
+&lt;li&gt;In the end, the only thing we need in the files is filepath&#x27;s to images&#x2F;sounds, shader files, vertex&#x2F;indices data for models and instance id&#x27;s for models being instanced.&lt;&#x2F;li&gt;
+&lt;&#x2F;ul&gt;
+&lt;p&gt;In the next post, I will start to outline what Tech we shall use.&lt;&#x2F;p&gt;
+</content>
+	</entry>
+</feed>
